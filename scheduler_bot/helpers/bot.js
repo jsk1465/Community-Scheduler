@@ -1,10 +1,10 @@
 let SlackBot = require('slackbots');
 let mongoose = require('mongoose');
-let Badword = require('../models/user_schedules.js');
+let UserSchedules = require('../models/user_schedules.js');
 
 let bot = new SlackBot({
-    token: 'Secret Token',
-    name: 'SlackBot'
+    token: 'xoxb-776876304389-776520912580-yxYi8KWfEQcpWqmXksDJE4eM',
+    name: 'hackaschedule'
 });
 
 exports.run = () => {
@@ -14,7 +14,7 @@ exports.run = () => {
 
 let onStart = () => {
   console.log('Bot started');
-  bot.postMessageToChannel(channel.name,
+  bot.postMessageToChannel('general',
       'I have joined',
       {as_user: true});
 }
