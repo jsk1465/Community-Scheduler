@@ -1,0 +1,17 @@
+{
+  "name": "scheduler_bot",
+  "version": "1.0.0",
+  "description": "Community Scheduler bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "mongoose": "^5.7.1",
+    "slackbots": "^1.2.0"
+  }
+}
