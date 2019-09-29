@@ -4,6 +4,7 @@ const fs = require('fs');
 let rawData = fs.readFileSync('../../cred.json');
 rawData = JSON.parse(rawData).token;
 console.log(rawData)
+
 let bot = new SlackBot({
     token: rawData,
     name: 'HackaSchedule'
@@ -49,6 +50,7 @@ let x = {
     ]
 }
 
+
 bot.on('start', () => {
     // more information about additional params https://api.slack.com/methods/chat.postMessage
     let params = {};
@@ -56,7 +58,7 @@ bot.on('start', () => {
     
     // define channel, where bot exist. You can adjust it there https://my.slack.com/services 
     bot.postMessageToChannel(
-        'general',
+        'testform',
         'Hi!',
         params);
 });
@@ -71,11 +73,6 @@ bot.on('message', data => {
     }
     let msg = data.text;
     let usr = data.user;
-    // var message = {
-    //     channel: "general",
-    //     attachments: JSON.stringify(attachments),
-    //     text: "This is a message with attachments"
-    // }
     if(msg=='\\h'){
         console.log('found someone to help!')
         msg = "test"
@@ -85,22 +82,4 @@ bot.on('message', data => {
             x);
     }
     console.log('tf is this');
-
-    // bot.postMessageToChannel(
-    //     'general',
-    //     data);
 });
-
-
-/*
-let http = require('http');
-http.createServer((req, res) => listen(8080, '127.0.0.1')); // run on local
-
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/slackbot', {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    promiseLibrary: require('bluebird') })
-  .then(() =>  console.log('connection succesful'))
-  .catch((err) => console.error(err));
-  */
