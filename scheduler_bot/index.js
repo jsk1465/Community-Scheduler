@@ -10,7 +10,7 @@ let bot = new SlackBot({
     name: 'HackaSchedule'
 });
 
-let x = {
+let formData = {
     "text": "Would you like to play a game?",
     "attachments": [
         {
@@ -79,7 +79,7 @@ bot.on('message', data => {
         bot.postMessageToChannel(
             'testform',
             msg,
-            x);
+            formData);
     }
-    console.log('tf is this');
+    console.log(data);
 });
