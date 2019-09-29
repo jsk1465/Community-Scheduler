@@ -12,7 +12,7 @@ let bot = new SlackBot({
 
 let atchData = JSON.parse(fs.readFileSync('../InputForms.json'));
 let formData = atchData;
-console.log(formData.attachments[0].title);
+console.log(formData.attachments);
 
 bot.on('start', () => {
     // more information about additional params https://api.slack.com/methods/chat.postMessage
