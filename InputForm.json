@@ -1,0 +1,112 @@
+{
+  "type": "modal",
+
+
+
+  "title": {
+
+    "type": "plain_text",
+    "text": "Add to Schedule",
+    "emoji": true
+
+  },
+
+
+  "close": {
+
+    "type": "plain_text",
+    "text": "Cancel",
+    "emoji": true
+
+  },
+
+  "submit": {
+
+    "type": "plain_text",
+    "text": "Submit",
+    "emoji": true
+  },
+
+  "blocks": [
+    {
+      "type": "input",
+      "label": {
+        "type": "plain_text",
+        "text": "Enter your User ID"
+      },
+      "element": {
+        "type": "plain_text_input",
+        "action_id": "input1",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Enter User Credentials"
+        }
+      }
+
+
+
+    },
+    {
+      "type": "section",
+      "block_id": "section001",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Select your gender"
+      },
+      "accessory": {
+        "action_id": "text001",
+        "type": "static_select",
+
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Select a gender"
+        },
+        "options": [
+          {
+            "text": {
+
+              "type": "plain_text",
+              "text": "Male"
+            },
+            "value": "value-0"
+          },
+
+          {
+            "text": {
+
+              "type": "plain_text",
+              "text": "Female"
+            },
+            "value": "value-1"
+          }
+
+        ]
+      }
+
+    },
+    {
+      "type": "section",
+      "block_id": "section2019",
+
+      "text": {
+        "type": "mrkdwn",
+        "text": "Pick a date for the deadline."
+      },
+      "accessory": {
+
+        "type": "datepicker",
+        "action_id": "datepicker2019",
+        "initial_date": "2019-09-29",
+
+        "placeholder": {
+
+          "type": "plain_text",
+          "text": "Select a date to volunteer"
+        }
+      }
+    },
+    {
+
+    }
+  ]
+}
