@@ -43,8 +43,6 @@
         }
       }
 
-
-
     },
     {
       "type": "section",
@@ -106,7 +104,285 @@
       }
     },
     {
+      "type": "section",
+      "block_id": "section_002",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Choose starting time"
+
+      },
+      "accessory": {
+        "action_id": "starttime",
+        "type": "static_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Choose time"
+        },
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "9:00"
+            },
+            "value": "value-0"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "9:30"
+            },
+            "value": "value-1"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "10:00"
+            },
+            "value": "value-2"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "10:30"
+            },
+            "value": "value-3"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "11:00"
+            },
+            "value": "value-4"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "11:30"
+            },
+            "value": "value-5"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "12:00"
+            },
+            "value": "value-6"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "12:30"
+            },
+            "value": "value-7"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "1:00"
+            },
+            "value": "value-8"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "1:30"
+            },
+            "value": "value-9"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "2:00"
+            },
+            "value": "value-10"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "2:30"
+            },
+            "value": "value-11"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "3:00"
+            },
+            "value": "value-12"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "3:30"
+            },
+            "value": "value-13"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "4:00"
+            },
+            "value": "value-14"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "4:30"
+            },
+            "value": "value-15"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "5:00"
+            },
+            "value": "value-16"
+          }
+        ]
+
+      }
+
+    },
+    {
+      "type": "section",
+      "block_id": "section_003",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Choose ending time"
+
+      },
+      "accessory": {
+        "action_id": "endtime",
+        "type": "static_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Choose time"
+        },
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "9:00"
+            },
+            "value": "value-0"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "9:30"
+            },
+            "value": "value-1"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "10:00"
+            },
+            "value": "value-2"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "10:30"
+            },
+            "value": "value-3"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "11:00"
+            },
+            "value": "value-4"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "11:30"
+            },
+            "value": "value-5"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "12:00"
+            },
+            "value": "value-6"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "12:30"
+            },
+            "value": "value-7"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "1:00"
+            },
+            "value": "value-8"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "1:30"
+            },
+            "value": "value-9"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "2:00"
+            },
+            "value": "value-10"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "2:30"
+            },
+            "value": "value-11"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "3:00"
+            },
+            "value": "value-12"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "3:30"
+            },
+            "value": "value-13"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "4:00"
+            },
+            "value": "value-14"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "4:30"
+            },
+            "value": "value-15"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "5:00"
+            },
+            "value": "value-16"
+          }
+        ]
+
+      }
 
     }
+
   ]
 }
