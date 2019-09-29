@@ -2,7 +2,7 @@ from collections import defaultdict
 from random import random, randint,seed
 import numpy as np
 import time
-numBin = 16
+numBin = 16*5
 
 
 def getRanBin():
@@ -133,9 +133,7 @@ def PDI2(testData):
             priorityArr[entry]+=numIslands
             for _ in range(numIslands):
                 finalData.append(entry)
-
             binI+=numIslands
-
         # randomly select one
         except ValueError:
             finalData.append(None)
@@ -181,10 +179,12 @@ def PDF(testData):
 
 def getNumIslands(arr,binNum,testData):
     minVal = 2**numBin
+    # minVal = 0
     minItemArr = []
     for item in arr:
         testVal = getIsland(item,binNum,testData)
         if(testVal<minVal):
+        # if(testVal>minVal):
             minVal = testVal
             minItemArr = [item]
         if(testVal==minVal):
@@ -291,7 +291,7 @@ def hue(data):
     return huer/len(data)
 
 def main():
-    testCases = 4
+    testCases = 40
     seed(int(time.time())**2)
     avgPDFI2 = 0
     avgPDFI = 0
@@ -311,12 +311,12 @@ def main():
         # print('PDF  ',avgPDF/(i))
         # print('PDR  ',avgPDR/(i))
         # print('PD   ',avgPD/(i))
-        print()
-        print('PDI2 ',PDI2(data))
+        # print()
+        # print('PDI2 ',PDI2(data))
         # print('PDI  ',PDI(data))
         # print('PDF  ',PDF(data))
-        print('PDR  ',PDR(data))
-        print('PD   ',PD(data))
+        # print('PDR  ',PDR(data))
+        # print('PD   ',PD(data))
 
     print()
     print('PDI2',avgPDFI2/(numIter))

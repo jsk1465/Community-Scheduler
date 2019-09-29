@@ -3,191 +3,191 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 let rawData = fs.readFileSync('../../cred.json');
 rawData = JSON.parse(rawData).token;
-// console.log(rawData)
+var request = require('request');
 
 let bot = new SlackBot({
     token: rawData,
     name: 'HackaSchedule'
 });
 
-let atchData = JSON.parse(fs.readFileSync('../InputForms.json'));
-// let formData = [{
-// 	"blocks": [
-// 		{
-// 			"type": "actions",
-// 			"elements": [
-// 				{
-// 					"type": "static_select",
-// 					"placeholder": {
-// 						"type": "plain_text",
-// 						"text": "Select an item",
-// 						"emoji": true
-// 					},
-// 					"options": [
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Excellent item 1",
-// 								"emoji": true
-// 							},
-// 							"value": "value-0"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Fantastic item 2",
-// 								"emoji": true
-// 							},
-// 							"value": "value-1"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Nifty item 3",
-// 								"emoji": true
-// 							},
-// 							"value": "value-2"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Pretty good item 4",
-// 								"emoji": true
-// 							},
-// 							"value": "value-3"
-// 						}
-// 					]
-// 				},
-// 				{
-// 					"type": "static_select",
-// 					"placeholder": {
-// 						"type": "plain_text",
-// 						"text": "Select an item",
-// 						"emoji": true
-// 					},
-// 					"options": [
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Excellent item 1",
-// 								"emoji": true
-// 							},
-// 							"value": "value-0"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Fantastic item 2",
-// 								"emoji": true
-// 							},
-// 							"value": "value-1"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Nifty item 3",
-// 								"emoji": true
-// 							},
-// 							"value": "value-2"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Pretty good item 4",
-// 								"emoji": true
-// 							},
-// 							"value": "value-3"
-// 						}
-// 					]
-// 				},
-// 				{
-// 					"type": "static_select",
-// 					"placeholder": {
-// 						"type": "plain_text",
-// 						"text": "Select an item",
-// 						"emoji": true
-// 					},
-// 					"options": [
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Excellent item 1",
-// 								"emoji": true
-// 							},
-// 							"value": "value-0"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Fantastic item 2",
-// 								"emoji": true
-// 							},
-// 							"value": "value-1"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Nifty item 3",
-// 								"emoji": true
-// 							},
-// 							"value": "value-2"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Pretty good item 4",
-// 								"emoji": true
-// 							},
-// 							"value": "value-3"
-// 						}
-// 					]
-// 				},
-// 				{
-// 					"type": "static_select",
-// 					"placeholder": {
-// 						"type": "plain_text",
-// 						"text": "Select an item",
-// 						"emoji": true
-// 					},
-// 					"options": [
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Excellent item 1",
-// 								"emoji": true
-// 							},
-// 							"value": "value-0"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Fantastic item 2",
-// 								"emoji": true
-// 							},
-// 							"value": "value-1"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Nifty item 3",
-// 								"emoji": true
-// 							},
-// 							"value": "value-2"
-// 						},
-// 						{
-// 							"text": {
-// 								"type": "plain_text",
-// 								"text": "Pretty good item 4",
-// 								"emoji": true
-// 							},
-// 							"value": "value-3"
-// 						}
-// 					]
-// 				}
-// 			]
-// 		}
-// 	]
-// }]
+// let atchData = JSON.parse(fs.readFileSync('../InputForms.json'));
+let formData = [{
+	"blocks": [
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "static_select",
+					"placeholder": {
+						"type": "plain_text",
+						"text": "Select an item",
+						"emoji": true
+					},
+					"options": [
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Excellent item 1",
+								"emoji": true
+							},
+							"value": "value-0"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Fantastic item 2",
+								"emoji": true
+							},
+							"value": "value-1"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Nifty item 3",
+								"emoji": true
+							},
+							"value": "value-2"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Pretty good item 4",
+								"emoji": true
+							},
+							"value": "value-3"
+						}
+					]
+				},
+				{
+					"type": "static_select",
+					"placeholder": {
+						"type": "plain_text",
+						"text": "Select an item",
+						"emoji": true
+					},
+					"options": [
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Excellent item 1",
+								"emoji": true
+							},
+							"value": "value-0"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Fantastic item 2",
+								"emoji": true
+							},
+							"value": "value-1"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Nifty item 3",
+								"emoji": true
+							},
+							"value": "value-2"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Pretty good item 4",
+								"emoji": true
+							},
+							"value": "value-3"
+						}
+					]
+				},
+				{
+					"type": "static_select",
+					"placeholder": {
+						"type": "plain_text",
+						"text": "Select an item",
+						"emoji": true
+					},
+					"options": [
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Excellent item 1",
+								"emoji": true
+							},
+							"value": "value-0"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Fantastic item 2",
+								"emoji": true
+							},
+							"value": "value-1"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Nifty item 3",
+								"emoji": true
+							},
+							"value": "value-2"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Pretty good item 4",
+								"emoji": true
+							},
+							"value": "value-3"
+						}
+					]
+				},
+				{
+					"type": "static_select",
+					"placeholder": {
+						"type": "plain_text",
+						"text": "Select an item",
+						"emoji": true
+					},
+					"options": [
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Excellent item 1",
+								"emoji": true
+							},
+							"value": "value-0"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Fantastic item 2",
+								"emoji": true
+							},
+							"value": "value-1"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Nifty item 3",
+								"emoji": true
+							},
+							"value": "value-2"
+						},
+						{
+							"text": {
+								"type": "plain_text",
+								"text": "Pretty good item 4",
+								"emoji": true
+							},
+							"value": "value-3"
+						}
+					]
+				}
+			]
+		}
+	]
+}]
 
 formData = {attachments:formData}
 
