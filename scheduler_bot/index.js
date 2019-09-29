@@ -2,7 +2,7 @@ let SlackBot = require('slackbots');
 let mongoose = require('mongoose');
 
 let http = require('http');
-http.createServer((req, res) => {}).listen(8080); // run on local
+http.createServer((req, res) => listen(8080, '127.0.0.1')); // run on local
 
 /* Create MongoDB Connection */
 mongoose.Promise = require('bluebird');

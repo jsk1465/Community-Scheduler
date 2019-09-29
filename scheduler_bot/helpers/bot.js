@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 let Badword = require('../models/user_schedules.js');
 
 let bot = new SlackBot({
-    token: 'BOT_API_KEY',
+    token: 'Secret Token',
     name: 'SlackBot'
 });
 
