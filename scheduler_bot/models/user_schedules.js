@@ -7,4 +7,4 @@ let scheduleSchema = new mongoose.Schema({
   end: {type: Date},
 });
 
-module.exports = mongoose.model('Badword', BadwordSchema);
+module.exports = mongoose.model('User Schedule', UserScheduleSchema);
